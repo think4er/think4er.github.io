@@ -1,0 +1,105 @@
+<html><head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title></title> 
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        
+      }
+      body {
+        background: #111;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .container{
+        width: 300px;
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.4),10px 10px 10px rgba(0,0,0,0.1), -5px -5px 10px rgba(200,200,200,0.03), -10px -10px 10px rgba(200,200,200,0.02);
+        
+        padding: 50px 20px;
+        background: #111;
+        
+        
+      }
+      form {
+        text-align: center;
+      }
+      input[type="text"]{
+        background: #131313;
+        box-shadow: inset 5px 5px 5px rgba(0,0,0,0.4), inset -5px -5px 5px rgba(150,150,150,0.05);
+        border: none;
+        outline: none;
+        height: 35px;
+        width: 80%;
+        padding: 2px 15px;
+        font-weight: 500;
+        color: crimson;
+        font-size: 20px;
+        letter-spacing: 2px;
+      }
+      input[type="button"]{
+        width: 30px;
+        height: 30px;
+        margin: 5px 7px;
+        border: 2px solid transparent;
+        outline: none;
+        color: #444447;
+        background: #111;
+        font-weight: bold;
+        font-size: 20px;
+      
+      }
+      input[type="button"]:hover {
+        color: deepskyblue;
+        transform: scale(1.1);
+      }
+      input.op:hover{
+        color: orange;
+      }
+      input.clear {
+        width: 60px;
+      }
+      
+    </style> 
+   </head> 
+   <body> 
+    <div class="container"> 
+     <form name="forms"> 
+      <input type="text" name="answer" id="answer"> 
+      <br> 
+      <br> 
+      <input type="button" value="×" class="op" onclick="forms.answer.value += '*'"> 
+      <input type="button" value="÷" class="op" onclick="forms.answer.value += '/'"> 
+      <input type="button" value="+" class="op" onclick="forms.answer.value += '+'"> 
+      <input type="button" value="-" class="op" onclick="forms.answer.value += '-'"> 
+      <br> 
+      <br> 
+      <input type="button" value="1" onclick="forms.answer.value += '1'"> 
+      <input type="button" value="2" onclick="forms.answer.value += '2'"> 
+      <input type="button" value="3" onclick="forms.answer.value += '3'"> 
+      <input type="button" value="%" class="op" onclick="forms.answer.value += '%'"> 
+      <br> 
+      <br> 
+      <input type="button" value="4" onclick="forms.answer.value += '4'"> 
+      <input type="button" value="5" onclick="forms.answer.value += '5'"> 
+      <input type="button" value="6" onclick="forms.answer.value += '6'"> 
+      <input type="button" value="**" class="op" onclick="forms.answer.value += '**'"> 
+      <br> 
+      <br> 
+      <input type="button" value="7" onclick="forms.answer.value += '7'"> 
+      <input type="button" value="8" onclick="forms.answer.value += '8'"> 
+      <input type="button" value="9" onclick="forms.answer.value += '9'"> 
+      <input type="button" value="=" class="op" onclick="forms.answer.value = eval(forms.answer.value)"> 
+      <br> 
+      <br> 
+      <input type="button" value="Clear" class="op clear" onclick="forms.answer.value = ''"> 
+      <input type="button" value="0" onclick="forms.answer.value += '0'"> 
+      <input type="button" value="." class="op" onclick="forms.answer.value += '.'"> 
+     </form> 
+    </div> 
+   
+  </body></html>
